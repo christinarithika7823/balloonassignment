@@ -11,32 +11,32 @@
 .c1 {
 	height: 100px;
 	width: 100px;
-	border: 2px solid black;
+	border: 2px solid transparent;
 	border-radius: 100px;
 }
 .c2 {
 	height: 100px;
 	width: 100px;
-	border: 2px solid black;
+	border: 2px solid transparent;
 	border-radius: 100px;
-	background-color: red;
+	/* background-color: red; */
 }
 .c3 {
 	height: 100px;
 	width: 100px;
-	border: 2px solid black;
+	border: 2px solid transparent;
 	border-radius: 100px;
 }
 .c4 {
 	height: 100px;
 	width: 100px;
-	border: 2px solid black;
+	border: 2px solid transparent;
 	border-radius: 100px;
 }
 .c5 {
 	height: 100px;
 	width: 100px;
-	border: 2px solid black;
+	border: 2px solid transparent;
 	border-radius: 100px;
 }
 #empty {
