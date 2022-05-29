@@ -1,0 +1,60 @@
+#container {
+	height: 700px;
+	width: 1000px;
+	display: flex;
+	margin-left: 280px;
+	border: 2px solid black;
+}
+#circles {
+	margin-left: 130px;
+}
+.c1 {
+	height: 100px;
+	width: 100px;
+	border: 2px solid black;
+	border-radius: 100px;
+}
+.c2 {
+	height: 100px;
+	width: 100px;
+	border: 2px solid black;
+	border-radius: 100px;
+	background-color: red;
+}
+.c3 {
+	height: 100px;
+	width: 100px;
+	border: 2px solid black;
+	border-radius: 100px;
+}
+.c4 {
+	height: 100px;
+	width: 100px;
+	border: 2px solid black;
+	border-radius: 100px;
+}
+.c5 {
+	height: 100px;
+	width: 100px;
+	border: 2px solid black;
+	border-radius: 100px;
+}
+#empty {
+	margin-top: 100px;
+	height: 500px;
+	width: 500px;
+	border: 2px solid black;
+}
+#bb {
+	height: 40px;
+	width: 100px;
+	margin-top: 400px;
+	margin-left: 40px;
+}
+
+#inp {
+	height: 40px;
+	width: 100px;
+	margin-top: 400px;
+	margin-left: 40px;
+}
