@@ -1,5 +1,4 @@
 import { useState } from "react";
-// import { Box } from "./Box";
 import "./Shapes.css";
 
 export const Shapes = () => {
@@ -35,41 +34,59 @@ export const Shapes = () => {
 			payload
 		]);
 	};
-	var Color1 = () => {
-		return "#" + Math.floor(Math.random() * 16777215).toString(16).padStart(6, "0").toUpperCase();
-	};
-	var Color2 = () => {
-		return "#" + Math.floor(Math.random() * 16777215).toString(16).padStart(6, "0").toUpperCase();
-	};
-	var Color3 = () => {
-		return "#" + Math.floor(Math.random() * 16777215).toString(16).padStart(6, "0").toUpperCase();
-	};
-	var Color4 = () => {
-		return "#" + Math.floor(Math.random() * 16777215).toString(16).padStart(6, "0").toUpperCase();
-	};
-	var Color5 = () => {
-		return "#" + Math.floor(Math.random() * 16777215).toString(16).padStart(6, "0").toUpperCase();
-	};
 
+	// var Color1 = () => {
+	// 	return "#" + Math.floor(Math.random() * 16777215).toString(16).padStart(6, "0").toUpperCase();
+	// };
+	// var Color2 = () => {
+	// 	return "#" + Math.floor(Math.random() * 16777215).toString(16).padStart(6, "0").toUpperCase();
+	// };
+	// var Color3 = () => {
+	// 	return "#" + Math.floor(Math.random() * 16777215).toString(16).padStart(6, "0").toUpperCase();
+	// };
+	// var Color4 = () => {
+	// 	return "#" + Math.floor(Math.random() * 16777215).toString(16).padStart(6, "0").toUpperCase();
+	// };
+	// var Color5 = () => {
+	// 	return "#" + Math.floor(Math.random() * 16777215).toString(16).padStart(6, "0").toUpperCase();
+	// };
+
+	const handlecircles = (el) => {
+		var pos = 0;
+		for (var j = 0; j < stack.length; j++) {
+			if (el.target.className === stack[j]) {
+				pos = j;
+			}
+		}
+		stack.splice(pos, 1);
+		setStack([
+			...stack,
+			stack
+		]);
+		console.log(el.target.className);
+	};
+	console.log(stack[0]);
 	return (
 		<div>
+			<h1>Balloon Assignment</h1>
 			<div id="container">
 				<div id="empty">
 					{stack.map((e) => {
 						return (
 							<div
 								className={e}
+								onClick={(e) => handlecircles(e)}
 								style={
 									e === "c1" ? (
-										{ backgroundColor: Color1() }
+										{ backgroundColor: "aquamarine" }
 									) : e === "c2" ? (
-										{ backgroundColor: Color2() }
+										{ backgroundColor: "chocolate" }
 									) : e === "c3" ? (
-										{ backgroundColor: Color3() }
+										{ backgroundColor: "darkred" }
 									) : e === "c4" ? (
-										{ backgroundColor: Color4() }
+										{ backgroundColor: "rosybrown" }
 									) : e === "c5" ? (
-										{ backgroundColor: Color5() }
+										{ backgroundColor: "lightcoral" }
 									) : (
 										{ backgroundColor: "" }
 									)
@@ -78,14 +95,16 @@ export const Shapes = () => {
 						);
 					})}
 				</div>
+
 				<div id="circles">
+					<h3>Circles</h3>
 					<div
 						className="c1"
 						style={
 							stack.includes("c1") ? (
 								{ display: "none", backgroundColor: "" }
 							) : (
-								{ display: "", backgroundColor: Color1() }
+								{ display: "", backgroundColor: "aquamarine" }
 							)
 						}
 					/>
@@ -96,7 +115,7 @@ export const Shapes = () => {
 							stack.includes("c2") ? (
 								{ display: "none", backgroundColor: "" }
 							) : (
-								{ display: "", backgroundColor: Color2() }
+								{ display: "", backgroundColor: "chocolate" }
 							)
 						}
 					/>
@@ -107,7 +126,7 @@ export const Shapes = () => {
 							stack.includes("c3") ? (
 								{ display: "none", backgroundColor: "" }
 							) : (
-								{ display: "", backgroundColor: Color3() }
+								{ display: "", backgroundColor: "darkred" }
 							)
 						}
 					/>
@@ -118,7 +137,7 @@ export const Shapes = () => {
 							stack.includes("c4") ? (
 								{ display: "none", backgroundColor: "" }
 							) : (
-								{ display: "", backgroundColor: Color4() }
+								{ display: "", backgroundColor: "rosybrown" }
 							)
 						}
 					/>
@@ -129,15 +148,17 @@ export const Shapes = () => {
 							stack.includes("c5") ? (
 								{ display: "none", backgroundColor: "" }
 							) : (
-								{ display: "", backgroundColor: Color5() }
+								{ display: "", backgroundColor: "lightcoral" }
 							)
 						}
 					/>
 				</div>
-				<input type="text" id="inp" value={text} onChange={(e) => setText(e.target.value)} />
-				<button id="bb" onClick={handlestack}>
-					shoot
-				</button>
+				<div>
+					<input type="text" id="inp" value={text} onChange={(e) => setText(e.target.value)} />
+					<button id="bb" onClick={handlestack}>
+						shoot
+					</button>
+				</div>
 			</div>
 		</div>
 	);
